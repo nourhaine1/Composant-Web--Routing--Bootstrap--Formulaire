@@ -10,13 +10,20 @@ import { ProduitService } from '../services/produit.service';
 export class ProduitsComponent implements OnInit {
   //produits: string[] ; //un tableau de chînes de caractères
   produits : Produit[]; //un tableau de Produit constructor(private
-  
-  constructor(produitService: ProduitService ) {
+  //produitService: ProduitService;
+  constructor(private produitService: ProduitService ) {
   this.produits = produitService.listeProduits();
   }
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+    
   }
+  supprimerProduit(p: Produit)
+{
+  let conf = confirm("Etes-vous sûr ?");
+if (conf)
+  this.produitService.supprimerProduit(p);
+//console.log(p);
+}
 
   
 }

@@ -1,0 +1,24 @@
+<div class="container">
+    <div>
+    <h2>Modifier un Produit :</h2>
+    </div>
+    <form >
+    <div  class="col-sm-2 col-md-2 col-lg-2">
+    <label >ID Produit</label>
+    <input readonly type="text" [(ngModel)]="currentProduit.idProduit"
+    name="idProduit" class="form-control">
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4" >
+    <label >Nom Produit</label>
+    <input type="text"[(ngModel)]= "currentProduit.nomProduit"
+    name="nomProduit" class="form-control">
+    </div>
+    <div class="col-sm-2 col-md-2 col-lg-2">
+    <label >Prix Produit</label>
+    <input type="number" [(ngModel)]= "currentProduit.prixProduit"
+    name="prixProduit" class="form-control">
+    </div>
+    <br>
+    <br>
+    <button type="submit" class="btn btn-primary" (click)="updateProduit()"> modifier</button>
+    </form></div>
